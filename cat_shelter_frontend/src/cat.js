@@ -164,3 +164,5 @@ function addCatsClickListeners() {
    document.querySelector('.sort-button').addEventListener("click", sortCats)
    
 }
+
+//finish cat.js
