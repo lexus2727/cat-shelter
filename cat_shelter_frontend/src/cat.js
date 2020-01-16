@@ -154,7 +154,7 @@ function addCatsClickListeners() {
    })
 
    document.querySelectorAll('.edit-cat-button').forEach(element => {
-       element.addEventListener("click", editDog)
+       element.addEventListener("click", editCat)
    })
 
    document.querySelectorAll('.delete-cat-button').forEach(element => {
