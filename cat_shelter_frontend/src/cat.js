@@ -165,4 +165,99 @@ function addCatsClickListeners() {
    
 }
 
-//finish cat.js
+function sortCats() { 
+
+    fetch("http://localhost:3000/cats")
+    .then(resp => resp.json())
+    .then(data => {
+
+        data.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)); 
+        console.log(data)
+        clearCatsHtml()
+        renderCatsHtml(data)
+        addCatsClickListeners()
+        addEventsClickListeners()
+    })
+
+
+}
+
+function clearCatsHtml() {
+    let catsIndex = document.getElementById("cats-list")
+    catsIndex.innerHTML = ''
+}
+
+Cat.prototype.catEventsHtml = function () {
+
+	let catEvents = this.events.map(event => {
+        let date = parseDate(event.updated_at)
+
+        return (`
+        <div class="card" event-id="${event.id}" >
+        <i>Last update: </i>${date} <br/>
+        <strong>Title: </strong>${event.title} <br/>
+        <strong>Description: </strong>${event.description} <br/>
+        
+        <button class="edit-event-button" style="background-color:orange">Edit Record</button>  
+        <button class="delete-event-button" style="background-color:red">Delete Record</button>  
+        </div>
+		`)
+    }).join('')
+
+    return (catEvents)
+}
+
+Cat.prototype.catHtml = function () {
+     
+    return `<div class="card" data-cat-id="${this.id}">
+            <button class="view-events-cat-button" style="background-color:blue">View Record</button>  
+            <button class="edit-cat-button" style="background-color:orange">Edit Info</button>  
+            <button class="delete-cat-button" style="background-color:red">Delete Cat</button>
+            </br></br>
+            <strong class="cat-name">${this.name}</strong> <br/>
+            <strong>Age: </strong>${this.age} years young <br/>
+            <strong>Sex: </strong>${this.sex} <br/>
+            <div class="additional-info" style="display:none">     
+            <strong>Description: </strong>${this.description}<br/>
+            <strong>Status: </strong>${this.status}<br/>
+            </div>
+        </div>` 
+}
+
+Cat.prototype.addEventButton = function () {
+
+    let addNewEventButton = document.createElement('button')
+    addNewEventButton.className = 'add-event-button'
+    addNewEventButton.id = this.id 
+    addNewEventButton.innerText = "Add Event"
+    addNewEventButton.style.backgroundColor = "green"
+     
+    return addNewEventButton
+
+}
+
+function renderCatsHtml(data) {
+    let catsIndex = document.getElementById("cats-list")
+
+    data.forEach((cat) => {
+  
+        let eventsIndexHtml = document.createElement('div')
+        eventsIndexHtml.className = 'events'
+        eventsIndexHtml.style.display = 'none'
+        let emptyEventsHtml = eventsIndexHtml
+          
+
+        let newCat = new Cat(cat)
+        eventsIndexHtml.innerHTML = newCat.catEventsHtml()     
+   
+        catsIndex.innerHTML += newCat.catHtml() 
+   
+        let selectedCatHtml = document.querySelector(`.card[data-cat-id="${newCat.id}"]`)           
+        selectedCatHtml.append(eventsIndexHtml.childElementCount ? eventsIndexHtml : emptyEventsHtml )
+        selectedCatHtml.querySelector('.events').appendChild(newCat.addEventButton())
+
+    });
+
+}
+
+
