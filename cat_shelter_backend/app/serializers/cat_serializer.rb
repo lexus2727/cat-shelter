@@ -3,4 +3,3 @@ class CatSerializer < ActiveModel::Serializer
         attributes :id, :name, :sex, :age, :description, :status
       end
 
-end
