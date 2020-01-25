@@ -1,4 +1,6 @@
 const catFormFields = `
+
+
 <label><strong>Name: </strong></label><br/>
     <input type="text" id="name"><br/>
     <input type="hidden" id="catId">
@@ -6,11 +8,14 @@ const catFormFields = `
     <label><strong>Age: </strong></label><br/>
     <input type="integer" id="age"><br/>  
 
-    <label>Sex: </strong></label><br/>
+    
+
+    <label><strong>Sex: </strong></label><br/>
     <input type="text" id="sex"><br/>  
 
     <label><strong>Description: </strong></label><br/>
     <textarea id="description" rows="3" cols="20"></textarea><br/>
+     
 
     <label><strong>Status: </strong></label><br/>
     <input type="text" id="status"><br/><br/>`
@@ -103,19 +108,22 @@ function updateCat() {
         status: document.getElementById('status').value,
     }
 
+console.log(cat)
     fetch(`http://localhost:3000/cats/${catId}`, {
         method: 'PATCH',
-        body: JSON.stringify(cat),
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(cat)
     })
     .then(resp => resp.json() )
     .then(cat => {
+        console.log(cat);
          clearCatsHtml()
          getCats()
          Cat.newCatForm()
         });
 }
 
+// Handler to render the edit cat form and populate it with current info
 function editCat() {
     let catId = this.parentElement.getAttribute('data-cat-id')
 
@@ -198,7 +206,6 @@ Cat.prototype.catEventsHtml = function () {
         <i>Last update: </i>${date} <br/>
         <strong>Title: </strong>${event.title} <br/>
         <strong>Description: </strong>${event.description} <br/>
-        
         <button class="edit-event-button" style="background-color:orange">Edit Record</button>  
         <button class="delete-event-button" style="background-color:red">Delete Record</button>  
         </div>
@@ -215,11 +222,13 @@ Cat.prototype.catHtml = function () {
             <button class="edit-cat-button" style="background-color:orange">Edit Info</button>  
             <button class="delete-cat-button" style="background-color:red">Delete Cat</button>
             </br></br>
+
             <strong class="cat-name">${this.name}</strong> <br/>
             <strong>Age: </strong>${this.age} years young <br/>
             <strong>Sex: </strong>${this.sex} <br/>
             <strong>Description: </strong>${this.description}<br/>
-            <strong>Status: </strong>${this.status}<br/>
+            <strong>Status: </strong>${this.status}<br/>  
+            <div class="additional-info" style="display:none"> 
             </div>
         </div>` 
 }

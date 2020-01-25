@@ -98,7 +98,8 @@ function updateEvent() {
     })
     .then(resp => resp.json() )
     .then(data => {
-         clearCatsHtml()
+        console.log(data)
+        clearCatsHtml()
          getCats()  
          Cat.newCatForm()
     })
