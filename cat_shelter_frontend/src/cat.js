@@ -218,7 +218,6 @@ Cat.prototype.catHtml = function () {
             <strong class="cat-name">${this.name}</strong> <br/>
             <strong>Age: </strong>${this.age} years young <br/>
             <strong>Sex: </strong>${this.sex} <br/>
-            <div class="additional-info" style="display:none">     
             <strong>Description: </strong>${this.description}<br/>
             <strong>Status: </strong>${this.status}<br/>
             </div>
