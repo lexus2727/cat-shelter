@@ -10889,3 +10889,262 @@ Processing by CatsController#index as */*
 Completed 200 OK in 63ms (Views: 60.0ms | ActiveRecord: 2.8ms | Allocations: 7273)
 
 
+Started GET "/cats" for ::1 at 2020-01-26 10:21:25 -0500
+  [1m[35m (15.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (219.64ms)
+Completed 200 OK in 438ms (Views: 381.7ms | ActiveRecord: 4.9ms | Allocations: 23259)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 10:37:38 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (2.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (3.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (90.15ms)
+Completed 200 OK in 111ms (Views: 102.4ms | ActiveRecord: 7.9ms | Allocations: 7327)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 15:33:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (58.18ms)
+Completed 200 OK in 62ms (Views: 57.2ms | ActiveRecord: 4.0ms | Allocations: 7324)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 15:33:35 -0500
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (50.53ms)
+Completed 200 OK in 60ms (Views: 57.2ms | ActiveRecord: 2.7ms | Allocations: 7289)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 15:34:24 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (69.31ms)
+Completed 200 OK in 121ms (Views: 110.6ms | ActiveRecord: 5.4ms | Allocations: 23303)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 15:34:31 -0500
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (72.23ms)
+Completed 200 OK in 78ms (Views: 74.2ms | ActiveRecord: 3.0ms | Allocations: 7289)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 15:34:41 -0500
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.44ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 1.7ms | Allocations: 7292)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 15:35:19 -0500
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (41.5ms)
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 3.7ms | Allocations: 7289)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 15:35:23 -0500
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.26ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 1.7ms | Allocations: 7289)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 15:36:34 -0500
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.21ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 1.7ms | Allocations: 7270)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 15:39:02 -0500
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.89ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 2.1ms | Allocations: 7270)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 15:39:27 -0500
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.81ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 2.0ms | Allocations: 7270)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 15:39:36 -0500
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (2.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.49ms)
+Completed 200 OK in 35ms (Views: 30.4ms | ActiveRecord: 4.4ms | Allocations: 7270)
+
+
+Started GET "/cats/29" for ::1 at 2020-01-26 15:39:53 -0500
+Processing by CatsController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:41:in `find_cat'
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:11:in `show'
+[active_model_serializers] Rendered CatSerializer with ActiveModelSerializers::Adapter::Attributes (3.33ms)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.6ms | Allocations: 2957)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 15:39:58 -0500
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.29ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 1.5ms | Allocations: 7270)
+
+
+Started GET "/cats" for ::1 at 2020-01-26 15:41:53 -0500
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 29]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 32]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 33]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."cat_id" = ?[0m  [["cat_id", 34]]
+[active_model_serializers]   ↳ app/controllers/cats_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (24.47ms)
+Completed 200 OK in 28ms (Views: 23.9ms | ActiveRecord: 3.8ms | Allocations: 7270)
+
+
