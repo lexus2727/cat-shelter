@@ -3,6 +3,25 @@ body {
     padding: 20;
     font-family: Helvetica;
   }
+
+  
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
   
   header {
     background-color: #E1332D;
@@ -16,6 +35,9 @@ body {
     font-family: Helvetica;
 
   }
+
+  
+  
   
   /* main {
      #4caf50;
